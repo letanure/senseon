@@ -1,0 +1,30 @@
+{
+  "name": "senseon-frontend-tech-test-ui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "cypress open"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "nuxt": "^2.14.12"
+  },
+  "devDependencies": {
+    "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/proxy": "^2.1.0",
+    "axios": "^0.21.1",
+    "cypress": "^6.9.1",
+    "msw": "^0.35.0",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.2.0",
+    "service-worker-loader": "^4.0.2",
+    "vue-svg-inline-loader": "^2.1.2"
+  },
+  "msw": {
+    "workerDirectory": "src/static"
+  }
+}
