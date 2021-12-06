@@ -31,8 +31,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: generate
+        run: npm run generate
+
       - name: Cypress run
-        with:
-          build: npm run build
-          generate: npm run generate
-          run: npm run test:e2e:ci
+        run: npm run test:e2e:ci
