@@ -18,10 +18,13 @@
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/proxy": "^2.1.0",
     "axios": "^0.24.0",
     "cypress": "^9.1.1",
+    "husky": "^7.0.4",
     "msw": "^0.36.0",
     "sass": "^1.44.0",
     "sass-loader": "^10.2.0",
