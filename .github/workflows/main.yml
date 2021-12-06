@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   workflow_dispatch:
 
@@ -27,13 +27,9 @@ jobs:
           path: ~/.npm
           key: npm-${{ hashFiles('package-lock.json') }}
           restore-keys: npm-
-          
+
       - name: Install dependencies
         run: npm install
 
       - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          generate: npm run generate       
-          start: npm start       
+        run: npm run test:e2e:ci

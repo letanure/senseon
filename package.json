@@ -7,7 +7,11 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "test": "cypress open"
+    "test": "cypress open",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test dev 3333 cy:open",
+    "test:e2e:ci": "start-server-and-test start 3333 cy:run"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -22,6 +26,7 @@
     "sass": "^1.32.5",
     "sass-loader": "^10.2.0",
     "service-worker-loader": "^4.0.2",
+    "start-server-and-test": "^1.14.0",
     "vue-svg-inline-loader": "^2.1.2"
   },
   "msw": {
