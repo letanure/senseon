@@ -1,0 +1,10 @@
+repo:
+  - '*'
+cypress:
+  - cypress/**/
+test:
+  - src/**/*test*.*
+style:
+  - src/**/style*.*
+UI:
+  - src/components/ui/*
