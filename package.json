@@ -21,7 +21,7 @@
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/proxy": "^2.1.0",
     "axios": "^0.21.1",
-    "cypress": "^6.9.1",
+    "cypress": "^9.1.1",
     "msw": "^0.35.0",
     "sass": "^1.44.0",
     "sass-loader": "^10.2.0",
