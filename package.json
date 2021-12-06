@@ -1,6 +1,6 @@
 {
   "name": "senseon-frontend-tech-test-ui",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,7 +11,8 @@
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "prepare": "husky install",
     "lint": "npm run lint:js && npm run lint:style",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
@@ -52,9 +53,14 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
     "vue-jest": "^3.0.4",
-    "vue-svg-inline-loader": "^2.1.2"
+    "vue-svg-inline-loader": "^2.1.2",
+    "semantic-release": "^18.0.1"
   },
   "msw": {
     "workerDirectory": "src/static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/letanure/senseon.git"
   }
 }
