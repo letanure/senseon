@@ -22,7 +22,7 @@
     "@nuxtjs/proxy": "^2.1.0",
     "axios": "^0.24.0",
     "cypress": "^6.9.1",
-    "msw": "^0.35.0",
+    "msw": "^0.36.0",
     "sass": "^1.44.0",
     "sass-loader": "^10.2.0",
     "service-worker-loader": "^4.0.2",
