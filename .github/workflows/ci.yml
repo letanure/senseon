@@ -1,17 +1,8 @@
 name: ci
-
-on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-    branches:
-      - main
-      - master
+on: [pull_request]
 
 jobs:
-  ci:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -22,22 +13,24 @@ jobs:
         with:
           node-version: 14.x
 
-      - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.4
+      - uses: actions/cache@v2
+        id: yarn-cache
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: |
+            ~/cache
+            !~/cache/exclude
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-yarn-
+      - name: Install dependencies
+        run: yarn install
 
-      - name: Install dependencies 👨🏻‍💻
-        run: npm ci --prefer-offline --no-audit
+      - name: Linting
+        run: yarn lint
 
-      - name: Run linter 👀
-        run: npm run lint
+      - name: Test
+        run: yarn test
 
-      - name: Run tests 🧪
-        run: npm run test
-
-      - name: Run build
-        run: npm run build
+      - name: Build
+        run: yarn build
