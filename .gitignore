@@ -92,3 +92,4 @@ sw.*
 venv
 /*.git
 cypress/videos/
+cypress/screenshots
