@@ -6,7 +6,7 @@ const API_PATH = '/api'
 const USER_CREDENTIALS = {
   user1: 'pass1',
   user2: 'pass2',
-  user3: 'pass3',
+  user3: 'pass3'
 }
 
 const COUNTER_VALUE_KEY = 'counter_value'
@@ -15,7 +15,8 @@ const initialCounterValue = window.sessionStorage.getItem(COUNTER_VALUE_KEY)
 if (initialCounterValue === null)
   window.sessionStorage.setItem(COUNTER_VALUE_KEY, '0')
 
-export default function (context) {
+export default function(context) {
+  // eslint-disable-next-line no-console
   console.debug('Plugin: api-mocking initialisation...')
 
   const worker = setupWorker(
@@ -23,7 +24,7 @@ export default function (context) {
       return res(
         ctx.json({
           success: true,
-          mocked: true,
+          mocked: true
         })
       )
     }),
@@ -33,7 +34,7 @@ export default function (context) {
       return res(
         ctx.json({
           value: 0,
-          mocked: true,
+          mocked: true
         })
       )
     }),
@@ -43,7 +44,7 @@ export default function (context) {
       return res(
         ctx.json({
           value,
-          mocked: true,
+          mocked: true
         })
       )
     }),
@@ -57,7 +58,7 @@ export default function (context) {
       return res(
         ctx.json({
           value: newValue,
-          mocked: true,
+          mocked: true
         })
       )
     }),
@@ -76,7 +77,7 @@ export default function (context) {
       for (let i = 0; i < 10; i++) {
         data.push({
           label: `Slice ${i + 1}`,
-          value: Math.random() * 100,
+          value: Math.random() * 100
         })
       }
 
@@ -84,7 +85,7 @@ export default function (context) {
     }),
 
     rest.post(`${API_PATH}/login`, (req, res, ctx) => {
-      const username = req.body['username']
+      const username = req.body.username
 
       if (!username) {
         return res(
@@ -92,19 +93,19 @@ export default function (context) {
           ctx.json({
             message: 'Username is required',
             mocked: true,
-            success: false,
+            success: false
           })
         )
       }
 
-      const password = req.body['password']
+      const password = req.body.password
       if (!password) {
         return res(
           ctx.status(400),
           ctx.json({
             message: 'Password is required',
             mocked: true,
-            success: false,
+            success: false
           })
         )
       }
@@ -118,7 +119,7 @@ export default function (context) {
           ctx.json({
             message: 'Wrong credentials',
             mocked: true,
-            success: false,
+            success: false
           })
         )
       }
@@ -126,7 +127,7 @@ export default function (context) {
       return res(
         ctx.json({
           success: true,
-          mocked: true,
+          mocked: true
         })
       )
     })
@@ -134,9 +135,10 @@ export default function (context) {
 
   worker
     .start({
-      onUnhandledRequest: 'bypass',
+      onUnhandledRequest: 'bypass'
     })
     .then(() => {
+      // eslint-disable-next-line no-console
       console.debug('MSR - worker started')
       context.store.dispatch(`app/${app.actions.POLL_FOR_API}`)
     })

@@ -1,23 +1,12 @@
 {
-  "include": [
-    "."
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
   "compilerOptions": {
-    "module": "es2015",
-    "moduleResolution": "node",
-    "target": "es5",
-    "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [ "./src/*" ],
-      "~/*": [ "./src/*" ],
-      "components": [
-        "components/*"
-      ]
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~~/*": ["./*"],
+      "@@/*": ["./*"]
     }
-  }
+  },
+  "exclude": ["node_modules", ".nuxt", "dist"]
 }
