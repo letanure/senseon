@@ -1,6 +1,6 @@
 {
   "name": "senseon-frontend-tech-test-ui",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,7 +11,8 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test dev 3333 cy:open",
-    "test:e2e:ci": "start-server-and-test start 3333 cy:run"
+    "test:e2e:ci": "start-server-and-test start 3333 cy:run",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -22,17 +23,28 @@
     "@commitlint/config-conventional": "^15.0.0",
     "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/proxy": "^2.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/release-notes-generator": "^10.0.3",
     "axios": "^0.24.0",
     "cypress": "^9.1.1",
     "husky": "^7.0.4",
     "msw": "^0.36.0",
     "sass": "^1.44.0",
     "sass-loader": "^10.2.0",
+    "semantic-release": "^18.0.1",
     "service-worker-loader": "^4.0.2",
     "start-server-and-test": "^1.14.0",
     "vue-svg-inline-loader": "^2.1.2"
   },
   "msw": {
     "workerDirectory": "src/static"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/letanure/senseon.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
