@@ -12,13 +12,16 @@
     "cy:run": "cypress run",
     "test:e2e": "start-server-and-test dev 3333 cy:open",
     "test:e2e:ci": "start-server-and-test start 3333 cy:run",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@nuxtjs/axios": "^5.12.5",
@@ -26,7 +29,12 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "@storybook/addon-actions": "^6.4.8",
+    "@storybook/addon-essentials": "^6.4.8",
+    "@storybook/addon-links": "^6.4.8",
+    "@storybook/vue": "^6.4.8",
     "axios": "^0.24.0",
+    "babel-loader": "^8.2.3",
     "cypress": "^9.1.1",
     "husky": "^7.0.4",
     "msw": "^0.36.0",
@@ -35,6 +43,7 @@
     "semantic-release": "^18.0.1",
     "service-worker-loader": "^4.0.2",
     "start-server-and-test": "^1.14.0",
+    "vue-loader": "^15.9.8",
     "vue-svg-inline-loader": "^2.1.2"
   },
   "msw": {
