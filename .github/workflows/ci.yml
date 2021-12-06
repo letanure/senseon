@@ -12,12 +12,15 @@ on:
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
 
     steps:
       - name: Checkout 🛎
