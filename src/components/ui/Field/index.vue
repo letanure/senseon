@@ -1,11 +1,13 @@
 <template>
   <label class="Field">
-    <div class="Field-label" v-if="label">{{ label }}</div>
+    <div class="Field-label" v-if="label">
+      {{ label }}
+    </div>
     <input
       class="Field-input"
-      :value="inputValue"
+      v-model="inputValue"
       :type="type"
-      @onChange="handleOnChange"
+      @input="handleOnChange"
     />
   </label>
 </template>
@@ -19,6 +21,10 @@ export default {
       type: String,
       required: true
     },
+    name: {
+      type: String,
+      required: true
+    },
     type: {
       type: String,
       default: "text",
@@ -28,20 +34,34 @@ export default {
     },
     value: {
       type: String,
-      default: ""
+      default: "",
+      required: false
     }
+  },
+
+  mounted() {
+    this.emitChange();
   },
 
   data() {
     return {
-      inputValue: this.value
+      inputValue: this.value,
+      touched: false,
+      valid: true
     };
   },
 
   methods: {
+    emitChange() {
+      this.$emit("onChange", {
+        value: this.inputValue,
+        touched: true,
+        changed: this.value !== this.inputValue,
+        valid: this.valid
+      });
+    },
     handleOnChange(e) {
-      console.log(e.target.value);
-      this.$emit("onChange");
+      this.emitChange();
     }
   }
 };
