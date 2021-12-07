@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/letanure/senseon/compare/v1.7.1...v1.8.0) (2021-12-07)
+
+
+### Features
+
+* reorder semantic release ([1c5579b](https://github.com/letanure/senseon/commit/1c5579b7fe15ac3a713a5db8d67700a4f9b1bbb8))
+
 ## [1.7.1](https://github.com/letanure/senseon/compare/v1.7.0...v1.7.1) (2021-12-07)
 
 
