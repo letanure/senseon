@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/letanure/senseon/compare/v1.6.0...v1.6.1) (2021-12-07)
+
+
+### Bug Fixes
+
+* test fix release ([06c834f](https://github.com/letanure/senseon/commit/06c834fbe202801579f0c88091f26d3a1f832f34))
+
 # [1.6.0](https://github.com/letanure/senseon/compare/v1.5.0...v1.6.0) (2021-12-07)
 
 
