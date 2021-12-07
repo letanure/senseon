@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/letanure/senseon/compare/v1.8.0...v1.9.0) (2021-12-07)
+
+
+### Features
+
+* test again ([3f18384](https://github.com/letanure/senseon/commit/3f1838417067b24b4bf458d2a413646ccf820f6a))
+
 # [1.8.0](https://github.com/letanure/senseon/compare/v1.7.1...v1.8.0) (2021-12-07)
 
 
