@@ -1,7 +1,9 @@
 import axios from "axios";
 import counter from "./counter";
+import login from "./login";
 const apis = {
-  counter
+  counter,
+  login
 };
 
 export default apiKey => {
@@ -12,7 +14,8 @@ export default apiKey => {
       ...api,
       [apiMethod]: async params => {
         const res = await axios[config.method](config.url, params);
-        return res.status === 200 ? res.data : null;
+        console.log(res);
+        return res.status === 200 ? res.data : false;
       }
     };
   }, {});
