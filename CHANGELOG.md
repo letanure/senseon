@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/letanure/senseon/compare/v1.7.0...v1.7.1) (2021-12-07)
+
+
+### Bug Fixes
+
+* try update package ([0f7caf1](https://github.com/letanure/senseon/commit/0f7caf19f81a6901bf9aacf9ac958cd32f7b4f75))
+
 # [1.7.0](https://github.com/letanure/senseon/compare/v1.6.1...v1.7.0) (2021-12-07)
 
 
