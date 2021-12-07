@@ -59,7 +59,8 @@ export default {
   font-family: "Nunito", sans-serif;
 }
 .LoginForm-logo {
-  height: 50px;
+  max-height: 50px;
+  max-width: 100%;
   margin: 0 auto;
   display: block;
   mix-blend-mode: multiply;
