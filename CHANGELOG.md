@@ -1,3 +1,11 @@
+# [1.6.0](https://github.com/letanure/senseon/compare/v1.5.0...v1.6.0) (2021-12-07)
+
+
+### Features
+
+* test release ([46a1305](https://github.com/letanure/senseon/commit/46a13054f066145c3172d35f09dde1f0724e8d0a))
+* test release config ([ef92ed8](https://github.com/letanure/senseon/commit/ef92ed841970f28e26b445547e7f5ad4f42353fe))
+
 # [1.5.0](https://github.com/letanure/senseon/compare/v1.4.0...v1.5.0) (2021-12-07)
 
 
