@@ -1,5 +1,5 @@
 <template>
-  <form class="Form" @submit="handeSubmit">
+  <form class="Form" @submit.prevent="handeSubmit">
     <div
       v-for="{ type, label, name, value } in fields"
       :key="name"
@@ -75,7 +75,7 @@ export default {
     handeSubmit(e) {
       e.preventDefault();
       if (this.formMeta.valid) {
-        this.$emit("submit", this.formValue);
+        this.$emit("submit", this.formValue, this.formMeta);
       }
     }
   }

@@ -97,7 +97,10 @@ export default {
   background-color: #ffffff15;
   border: 2px solid #ffffff20;
 }
-
+.button:hover,
+.button:focus {
+  background-color: #ffffff30;
+}
 .button--small {
   font-size: 12px;
   padding: 10px 16px;
