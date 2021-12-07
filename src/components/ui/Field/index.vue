@@ -1,6 +1,9 @@
 <template>
   <label class="Field">
-    <div class="Field-label" v-if="label">
+    <div
+      class="Field-label"
+      v-if="label && showLabel && inputValue.length === 0"
+    >
       {{ label }}
     </div>
     <input
@@ -8,6 +11,8 @@
       v-model="inputValue"
       :type="type"
       @input="handleOnChange"
+      @focus="showLabel = false"
+      @blur="showLabel = true"
     />
   </label>
 </template>
@@ -47,7 +52,8 @@ export default {
     return {
       inputValue: this.value,
       touched: false,
-      valid: true
+      valid: true,
+      showLabel: true
     };
   },
 
