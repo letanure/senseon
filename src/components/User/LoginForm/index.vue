@@ -11,6 +11,9 @@
 
 <script>
 import Form from "@/components/ui/Form";
+import setApi from "@/api";
+
+const loginApi = setApi("login");
 
 const formLogin = {
   title: "My form",
@@ -43,8 +46,11 @@ export default {
   },
 
   methods: {
-    handeSubmit(data) {
+    async handeSubmit(data) {
       console.log("Loginfoem", data);
+      const result = await loginApi.post(data).catch(err => {
+        console.log("Error", err);
+      });
     }
   }
 };
